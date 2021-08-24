@@ -1,35 +1,21 @@
-import './App.css';
+import './Menu.css';
 
-function App() {
+function Menu() {
   return (
-    <div className="app has-text-white has-background-dark">
-        <div className="columns is-gapless">
-            <div className="column">
-                <p className="bd-notification is-info is-size-4 has-text-centered has-text-bold">1h 40 min</p>
-                <div className="columns is-desktop">
-                    <div className="column">
-                        <div className="column">
-                            <p className="bd-notification is-info is-size-5 has-text-left has-text-bold">Task</p>
-                        </div>
-                        <div className="column">
-                            <p className="bd-notification is-info">Hola este es un ejercicio</p>
-                        </div>
-                    </div>
-                    <div className="column">
-                        <div className="column">
-                            <p className="bd-notification is-info is-size-5 has-text-left has-text-bold">Solution Javascript(Node.js 8.9.4)</p>
-                        </div>
-                        <div className="column">
-                            <textarea className="textarea is-large" placeholder="e.g. Hello world">
-                                import React from "react";
-                            </textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div className="menu has-background-black-strong-2 has-text-bold has-text-white has-text-centered has-full-height">
+        <aside className="menu">
+            <ul className="menu-list">
+                <span className="icon pt-5 pb-5"><i className="fas fa-2x fa-vial"></i></span>
+                <li><a className="has-text-white">1</a></li>
+                <li><a className="has-text-white">2</a></li>
+            </ul>
+            <ul className="menu-list">
+                <li><a><span className="icon has-text-white"><i className="fas fa-cog"></i></span></a></li>
+                <li><a><span className="icon has-text-white"><i className="fas fa-sign-out-alt"></i></span></a></li>
+            </ul>
+        </aside>
     </div>
   );
 }
 
-export default App;
+export default Menu;

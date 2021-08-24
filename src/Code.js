@@ -1,17 +1,54 @@
-import './Footer.css';
+import './Code.css';
+import { useEffect, useRef } from "react";
+import { basicSetup } from "@codemirror/basic-setup";
+import { EditorState } from "@codemirror/state";
+import { EditorView } from "@codemirror/view";
+import { javascript } from "@codemirror/lang-javascript";
 
-function Footer() {
-  return (
-      <footer className="footer">
-          <div className="content has-text-centered">
-              <p>
-                  <strong>Codexam</strong> by <a href="https://stephanoapiolaza.cl">Stephano Apiolaza</a>. The source code is licensed
-                  <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                  is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-              </p>
-          </div>
-      </footer>
-  );
+export default function Code() {
+    const editor = useRef();
+
+    const myTheme = EditorView.baseTheme({
+        "&.cm-editor": {
+            backgroundColor: '#23241e',
+            fontSize: '0.8rem'
+        },
+        ".cm-scroller": {
+            fontFamily:'Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace'
+        },
+        ".cm-activeLine": {
+            backgroundColor: 'transparent !important'
+        },
+        ".cm-gutters": {
+            backgroundColor: 'transparent !important',
+            borderRight: 'none !important'
+        },
+        ".cm-activeLineGutter": {
+            backgroundColor: 'transparent !important'
+        },
+        ".cm-focused": {
+            backgroundColor: 'yellow'
+        }
+    })
+
+    useEffect(() => {
+        const log = (event) => console.log(event);
+        editor.current.addEventListener("input", log);
+
+        const state = EditorState.create({
+            doc: "<script>https://www.google.cl/</script>",
+            extensions: [basicSetup, javascript(), myTheme]
+        });
+        const view = new EditorView({ state, parent: editor.current });
+        return () => {
+            view.destroy();
+            editor.current.removeEventListener("input", log);
+        };
+    }, []);
+
+    return (
+        <div className="App has-full-height scrollable">
+            <div ref={editor}></div>
+        </div>
+    );
 }
-
-export default Footer;

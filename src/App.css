@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+html, body {
+    background-color: #000000;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    height: 100%;
+    width: 100%;
+    position: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.has-full-height {
+    height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.has-text-bold {
+    font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+.has-background-black-strong-2 {
+    background-color: #272822;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.has-background-black-strong-4 {
+    background-color: #2e3129;
+}
+
+.has-background-black-strong-5 {
+    background-color: #23241e;
+}
+
+.scrollable {
+    overflow-y: scroll;
+}
+
+.has-height-3 {
+    height: 30%;
+}
+
+.has-height-4 {
+    height: 40%;
+}
+
+.has-height-6 {
+    height: 60%;
+}
+
+.has-border-black {
+    border-bottom: 1px solid rgb(66, 66, 66);
+    border-top: 1px solid rgb(66, 66, 66);
 }
