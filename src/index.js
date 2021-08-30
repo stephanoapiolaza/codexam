@@ -5,7 +5,7 @@ import 'bulma/css/bulma.css';
 import '@fortawesome/fontawesome-free/css/fontawesome.css';
 import '@fortawesome/fontawesome-free/css/brands.css';
 import '@fortawesome/fontawesome-free/css/solid.css';
-import App from './App';
+import App from './features/assessment/App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

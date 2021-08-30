@@ -51,7 +51,7 @@ function Task() {
                 that will call the <code>fetchPhotos</code> method (from the context). The button should have
                 a <code>fetch-photos</code> id.</p>
             <p>For the reference, you can use the following image:</p>
-            <p class="has-text-centered"><img
+            <p className="has-text-centered"><img
                 src="https://s3.amazonaws.com/codility-frontend-prod/media/task_static/photos_list/static/1576497491/images/component.png"
                 alt="" /></p></div>
     `)}
